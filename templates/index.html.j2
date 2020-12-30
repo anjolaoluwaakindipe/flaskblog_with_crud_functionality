@@ -1,0 +1,23 @@
+{%extends 'base.html.j2'%}
+
+{% block head %}
+<title>Home</title>
+{% endblock %} 
+
+{% block body %}
+  <br>
+    <h1>Home Page 3</h1>
+  <br>
+  <div>
+    <div class="bg-light p-5 rounded">
+      <div class="col-sm-8 mx-auto">
+        <h1>Welcome</h1>
+        <p>Welcome to Anjola's Blog. This is a simple Flask Project to help me better my python skills.</p>
+        <p>Visit my GitHub at <a href="https://github.com/anjolaoluwaakindipe">github.com/anjolaoluwaakindipe</a> to see more of my projects
+        <p>
+          <a class="btn btn-primary" href="/posts" role="button">Go to posts &raquo;</a>
+        </p>
+      </div>
+    </div>
+  </div>
+{%endblock %}

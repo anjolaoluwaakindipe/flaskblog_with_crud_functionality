@@ -1,0 +1,4 @@
+.vscode
+*posts.db
+
+*Pipfile.lock

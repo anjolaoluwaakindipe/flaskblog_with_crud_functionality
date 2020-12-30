@@ -1,0 +1,43 @@
+{%extends 'base.html.j2'%}
+
+{% block head %}
+<title>Posts</title>
+
+
+{% endblock %} 
+
+
+
+{% block body %}
+  
+  <br>
+  <div style= "display: flex; justify-content: space-between; align-items: center">
+    <h1>All Posts</h1>
+
+    <a class="btn btn-success float-right" href="/posts/new">+ New Post</a>
+  </div>
+  <hr>
+
+  {%for post in posts%}
+    <br>
+    <h2>{{post.title}}</h2>
+
+    {% if post.author %}
+      <small>Written by {{post.author}} on {{post.date_posted}}</small>
+
+    {% else %}
+      <small>Written by Unknown on {{post.date_posted}}</small>
+    {% endif %}
+    <br>
+    <br>
+
+    <p style="white-space: pre-wrap">{{post.content}}</p>
+
+    
+    <a href="/posts/delete/{{post.id}}" class="btn btn-danger">Delete</a>
+    <a href="/posts/edit/{{post.id}}" class ="btn btn-primary">Edit</a>
+    <br>
+    <br>
+    <hr>
+  {% endfor%}
+{%endblock %}
